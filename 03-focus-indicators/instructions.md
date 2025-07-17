@@ -6,8 +6,8 @@ Many users navigate websites using only their keyboard (Tab key) instead of a mo
 ## Your Mission
 1. **Experience keyboard navigation:**
    - Open `challenge.html` in your browser
-   - Click in the address bar, then press Tab repeatedly
-   - Notice how hard it is to see where you are on the page?
+   - Click on the title, "Online Learning Platform", then press Tab repeatedly
+   - Notice how hard it is to see where you are on the page? The browser's focus is changing, but there is no visual indicator!
 
 2. **Understand the issue:**
    - Some elements have no focus indicator at all
