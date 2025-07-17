@@ -19,9 +19,7 @@ By the end of this lab, you'll be able to:
 4. Each folder has its own `instructions.md` - start there!
 
 ## ⏱️ Time Estimate
-- **Total time**: 60 minutes
-- Each section shows estimated time, but work at your own pace
-- If you're short on time, prioritize sections 1-3
+- **Total time**: ~60 minutes
 
 ## 🛠️ Tools You'll Need
 - A text editor
