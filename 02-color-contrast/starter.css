@@ -1,0 +1,131 @@
+/* Color Contrast Challenge - Starter CSS */
+/* This CSS has accessibility issues that you need to fix! */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.link {
+    color: #bdc3c7;  /* Poor contrast! */
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #ecf0f1;  /* Still poor contrast on hover */
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.hero {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.subtle-text {
+    color: #bdc3c7;  /* Poor contrast against white background! */
+    font-style: italic;
+}
+
+.menu {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.menu-item {
+    border-bottom: 1px solid #ecf0f1;
+    padding: 1rem 0;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.price {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.error-message {
+    color: #e74c3c;  /* Only uses color to show error - not accessible! */
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    background-color: #34495e;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+footer .link {
+    color: #bdc3c7;  /* Poor contrast again! */
+}

@@ -1,0 +1,594 @@
+/* Final Challenge - Solution CSS */
+/* This CSS fixes ALL accessibility issues from the starter file */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    font-size: 1rem; /* FIXED: Using rem instead of px */
+}
+
+/* FIXED: Proper focus indicators for all interactive elements */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+}
+
+header {
+    background-color: #8b0000;
+    color: white;
+    padding: 1.25rem; /* FIXED: Using rem */
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2rem; /* FIXED: Using rem */
+    margin-bottom: 0.9375rem;
+    max-width: 62.5rem; /* FIXED: Using max-width instead of fixed width */
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    gap: 1.875rem;
+    max-width: 62.5rem; /* FIXED: Using max-width */
+    margin: 0 auto;
+    flex-wrap: wrap; /* FIXED: Allow wrapping */
+}
+
+nav a {
+    color: #ffffff; /* FIXED: Better contrast against red background */
+    text-decoration: underline; /* ADDED: Visual indicator beyond color */
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    /* REMOVED white-space: nowrap */
+}
+
+nav a:hover {
+    color: #ffd700;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* FIXED: Clear focus indicators for navigation on dark background */
+nav a:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    max-width: 62.5rem; /* FIXED: Using max-width */
+    margin: 0 auto;
+    padding: 1.875rem 1.25rem;
+    width: 100%; /* ADDED: Ensures flexibility */
+}
+
+.hero {
+    background: linear-gradient(135deg, #8b0000 0%, #a0522d 100%);
+    color: white;
+    padding: 3.75rem 2.5rem; /* FIXED: Using rem */
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-bottom: 2.5rem;
+    width: 100%; /* FIXED: Flexible width */
+}
+
+.hero h2 {
+    font-size: 2.25rem; /* FIXED: Using rem */
+    margin-bottom: 1.25rem;
+}
+
+.hero-text {
+    font-size: 1.125rem; /* FIXED: Using rem */
+    margin-bottom: 1.875rem;
+    color: #ffffff; /* FIXED: Better contrast on gradient background */
+}
+
+.cta-button {
+    background-color: #ffd700;
+    color: #000000; /* FIXED: Much better contrast */
+    padding: 0.9375rem 1.875rem; /* FIXED: Using rem */
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem; /* FIXED: Using rem */
+    cursor: pointer;
+    min-width: 12.5rem; /* FIXED: Using min-width */
+    font-weight: bold; /* ADDED: Better readability */
+}
+
+/* FIXED: Focus indicator for CTA button on gradient background */
+.cta-button:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.featured-dishes {
+    margin-bottom: 2.5rem;
+}
+
+.featured-dishes h2 {
+    font-size: 1.75rem; /* FIXED: Using rem */
+    color: #8b0000;
+    margin-bottom: 1.5625rem;
+}
+
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* FIXED: Flexible grid */
+    gap: 1.5625rem;
+    width: 100%;
+}
+
+.dish-card {
+    background-color: white;
+    padding: 1.5625rem; /* FIXED: Using rem */
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+    width: 100%; /* FIXED: Flexible width */
+    min-height: 17.5rem; /* FIXED: Using min-height instead of fixed height */
+}
+
+.dish-card h3 {
+    font-size: 1.25rem; /* FIXED: Using rem */
+    color: #8b0000;
+    margin-bottom: 0.625rem;
+}
+
+.dish-description {
+    font-size: 0.875rem; /* FIXED: Using rem */
+    color: #333333; /* FIXED: Better contrast */
+    margin-bottom: 0.9375rem;
+    /* REMOVED fixed height and overflow */
+}
+
+.price {
+    font-size: 1.125rem; /* FIXED: Using rem */
+    font-weight: bold;
+    color: #228b22;
+    display: block;
+    margin-bottom: 0.625rem;
+}
+
+.dish-status {
+    font-size: 0.75rem; /* FIXED: Using rem */
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    min-width: 7.5rem; /* FIXED: Using min-width */
+    font-weight: bold; /* ADDED: Better readability */
+}
+
+/* FIXED: Status indicators use more than just color */
+.dish-status.error {
+    background-color: #ffebee;
+    color: #c62828; /* FIXED: Better contrast */
+    border-left: 0.25rem solid #c62828; /* ADDED: Visual indicator beyond color */
+}
+
+.dish-status.success {
+    background-color: #e8f5e8;
+    color: #2e7d32; /* FIXED: Better contrast */
+    border-left: 0.25rem solid #2e7d32; /* ADDED: Visual indicator beyond color */
+}
+
+.dish-status.warning {
+    background-color: #fff8e1;
+    color: #ef6c00; /* FIXED: Better contrast */
+    border-left: 0.25rem solid #ef6c00; /* ADDED: Visual indicator beyond color */
+}
+
+.menu-preview {
+    margin-bottom: 2.5rem;
+}
+
+.menu-preview h2 {
+    font-size: 1.75rem; /* FIXED: Using rem */
+    color: #8b0000;
+    margin-bottom: 1.5625rem;
+}
+
+.menu-categories {
+    display: flex;
+    gap: 1.875rem;
+    justify-content: center;
+    flex-wrap: wrap; /* FIXED: Allow wrapping */
+}
+
+.category-item {
+    background-color: white;
+    padding: 1.5625rem; /* FIXED: Using rem */
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 17.5rem; /* FIXED: Using min-width */
+    min-height: 12.5rem; /* FIXED: Using min-height */
+}
+
+.category-item h3 {
+    font-size: 1.125rem; /* FIXED: Using rem */
+    color: #8b0000;
+    margin-bottom: 0.625rem;
+}
+
+.category-text {
+    font-size: 0.875rem; /* FIXED: Using rem */
+    color: #333333; /* FIXED: Better contrast */
+    margin-bottom: 0.9375rem;
+    /* REMOVED fixed height and overflow */
+}
+
+.menu-link {
+    color: #0066cc; /* FIXED: Better contrast */
+    text-decoration: underline; /* ADDED: Visual indicator */
+    font-size: 0.875rem; /* FIXED: Using rem */
+    padding: 0.5rem 1rem;
+    border: 0.125rem solid #0066cc;
+    border-radius: 0.25rem;
+    display: inline-block;
+}
+
+/* FIXED: Focus styles for menu links */
+.menu-link:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+    background-color: #e6f3ff;
+}
+
+.reservation-form {
+    background-color: #f5f5f5;
+    padding: 2.5rem; /* FIXED: Using rem */
+    border-radius: 0.5rem;
+    margin-bottom: 2.5rem;
+    width: 100%; /* FIXED: Flexible width */
+}
+
+.reservation-form h2 {
+    font-size: 1.75rem; /* FIXED: Using rem */
+    color: #8b0000;
+    margin-bottom: 0.625rem;
+}
+
+.form-intro {
+    font-size: 1rem; /* FIXED: Using rem */
+    color: #333333; /* FIXED: Better contrast */
+    margin-bottom: 1.875rem;
+    width: 100%; /* FIXED: Flexible width */
+}
+
+.booking-form {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.875rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap; /* FIXED: Allow wrapping */
+}
+
+.form-group {
+    flex: 1;
+    min-width: 12.5rem;
+}
+
+label {
+    display: block;
+    font-size: 0.875rem; /* FIXED: Using rem */
+    font-weight: bold;
+    margin-bottom: 0.3125rem;
+    color: #333;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.625rem; /* FIXED: Using rem */
+    border: 0.125rem solid #ddd;
+    border-radius: 0.25rem;
+    font-size: 0.875rem; /* FIXED: Using rem */
+}
+
+/* FIXED: Strong focus indicators for form elements */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #0066cc;
+    outline: 2px solid #0066cc;
+    outline-offset: 1px;
+}
+
+.error-message {
+    color: #c62828; /* FIXED: Better contrast */
+    background-color: #ffebee; /* ADDED: Background color */
+    border-left: 0.25rem solid #c62828; /* ADDED: Visual indicator beyond color */
+    padding: 0.5rem; /* ADDED: Padding */
+    font-size: 0.75rem; /* FIXED: Using rem */
+    margin-top: 0.3125rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 1.875rem;
+    flex-wrap: wrap; /* FIXED: Allow wrapping */
+}
+
+.submit-button {
+    background-color: #8b0000;
+    color: white;
+    padding: 0.75rem 1.5rem; /* FIXED: Using rem */
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem; /* FIXED: Using rem */
+    min-width: 9.375rem; /* FIXED: Using min-width */
+}
+
+.reset-button {
+    background-color: #6c757d;
+    color: white; /* FIXED: Better contrast */
+    padding: 0.75rem 1.5rem; /* FIXED: Using rem */
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem; /* FIXED: Using rem */
+    min-width: 9.375rem; /* FIXED: Using min-width */
+}
+
+/* FIXED: Focus styles for form buttons */
+.submit-button:focus,
+.reset-button:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+}
+
+.restaurant-info {
+    margin-bottom: 2.5rem;
+}
+
+.restaurant-info h2 {
+    font-size: 1.75rem; /* FIXED: Using rem */
+    color: #8b0000;
+    margin-bottom: 1.5625rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* FIXED: Flexible grid */
+    gap: 1.5625rem;
+    width: 100%;
+}
+
+.info-card {
+    background-color: white;
+    padding: 1.5625rem; /* FIXED: Using rem */
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+    width: 100%; /* FIXED: Flexible width */
+    min-height: 13.75rem; /* FIXED: Using min-height */
+}
+
+.info-card h3 {
+    font-size: 1.125rem; /* FIXED: Using rem */
+    color: #8b0000;
+    margin-bottom: 0.625rem;
+}
+
+.info-text {
+    font-size: 0.875rem; /* FIXED: Using rem */
+    color: #333333; /* FIXED: Better contrast */
+    margin-bottom: 0.9375rem;
+    /* REMOVED fixed height and overflow */
+}
+
+.info-link {
+    color: #0066cc; /* FIXED: Better contrast */
+    text-decoration: underline; /* ADDED: Visual indicator */
+    font-size: 0.875rem; /* FIXED: Using rem */
+}
+
+/* FIXED: Focus styles for info links */
+.info-link:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+}
+
+.status-badge {
+    background-color: #e8f5e8;
+    color: #2e7d32; /* FIXED: Better contrast */
+    border: 0.125rem solid #2e7d32; /* ADDED: Visual indicator beyond color */
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem; /* FIXED: Using rem */
+    font-weight: bold;
+}
+
+.newsletter {
+    background-color: #8b0000;
+    color: white;
+    padding: 2.5rem; /* FIXED: Using rem */
+    border-radius: 0.5rem;
+    margin-bottom: 2.5rem;
+    width: 100%; /* FIXED: Flexible width */
+}
+
+.newsletter h2 {
+    font-size: 1.5rem; /* FIXED: Using rem */
+    margin-bottom: 0.625rem;
+}
+
+.newsletter-text {
+    font-size: 1rem; /* FIXED: Using rem */
+    color: #ffffff; /* FIXED: Better contrast on red background */
+    margin-bottom: 1.5625rem;
+    width: 100%; /* FIXED: Flexible width */
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.newsletter-input {
+    width: 100%;
+}
+
+.newsletter-input label {
+    color: white;
+    font-size: 0.875rem; /* FIXED: Using rem */
+    margin-bottom: 0.3125rem;
+}
+
+.newsletter-input input {
+    max-width: 25rem; /* FIXED: Using max-width */
+    width: 100%; /* ADDED: Flexible width */
+    padding: 0.625rem; /* FIXED: Using rem */
+    font-size: 0.875rem; /* FIXED: Using rem */
+}
+
+/* FIXED: Better focus for newsletter input on dark background */
+.newsletter-input input:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.newsletter-preferences {
+    display: flex;
+    gap: 1.875rem;
+    flex-wrap: wrap; /* FIXED: Allow wrapping */
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.3125rem;
+    color: #ffffff; /* FIXED: Better contrast */
+    font-size: 0.875rem; /* FIXED: Using rem */
+    /* REMOVED white-space: nowrap */
+}
+
+/* FIXED: Better focus for checkboxes on dark background */
+.checkbox-label input:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.newsletter-button {
+    background-color: #ffd700;
+    color: #000000; /* FIXED: Better contrast */
+    padding: 0.75rem 1.5rem; /* FIXED: Using rem */
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.875rem; /* FIXED: Using rem */
+    min-width: 9.375rem; /* FIXED: Using min-width */
+    font-weight: bold;
+}
+
+/* FIXED: Focus indicator for newsletter button */
+.newsletter-button:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
+footer {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 2.5rem 1.25rem; /* FIXED: Using rem */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 62.5rem; /* FIXED: Using max-width */
+    margin: 0 auto;
+    margin-bottom: 1.875rem;
+    flex-wrap: wrap; /* FIXED: Allow wrapping */
+    gap: 1.875rem; /* ADDED: Gap for wrapped items */
+}
+
+.footer-section h4 {
+    font-size: 1rem; /* FIXED: Using rem */
+    margin-bottom: 0.9375rem;
+}
+
+.footer-text {
+    font-size: 0.875rem; /* FIXED: Using rem */
+    color: #ffffff; /* FIXED: Better contrast */
+    margin-bottom: 0.625rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #ffffff; /* FIXED: Better contrast */
+    text-decoration: underline; /* ADDED: Visual indicator */
+    font-size: 0.875rem; /* FIXED: Using rem */
+}
+
+.social-links {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap; /* FIXED: Allow wrapping */
+}
+
+.social-links a {
+    color: #ffffff; /* FIXED: Better contrast */
+    text-decoration: underline; /* ADDED: Visual indicator */
+    font-size: 0.875rem; /* FIXED: Using rem */
+}
+
+.footer-bottom {
+    border-top: 0.0625rem solid #444;
+    padding-top: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 62.5rem; /* FIXED: Using max-width */
+    margin: 0 auto;
+    flex-wrap: wrap; /* FIXED: Allow wrapping */
+    gap: 1.25rem; /* ADDED: Gap for wrapped items */
+}
+
+.copyright {
+    font-size: 0.875rem; /* FIXED: Using rem */
+    color: #ffffff; /* FIXED: Better contrast */
+}
+
+.legal-links {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap; /* ADDED: Allow wrapping */
+}
+
+.legal-links a {
+    color: #ffffff; /* FIXED: Better contrast */
+    text-decoration: underline; /* ADDED: Visual indicator */
+    font-size: 0.875rem; /* FIXED: Using rem */
+}
+
+/* FIXED: Focus indicators for all footer links */
+.footer-links a:focus,
+.social-links a:focus,
+.legal-links a:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}

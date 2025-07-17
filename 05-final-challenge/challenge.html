@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Challenge - Bella Vista Restaurant</title>
+    <link rel="stylesheet" href="starter.css">
+</head>
+<body>
+    <header>
+        <h1>Bella Vista Restaurant</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#reservations">Reservations</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Experience Fine Italian Dining</h2>
+            <p class="hero-text">Authentic flavors, fresh ingredients, and a warm atmosphere await you at Bella Vista.</p>
+            <button class="cta-button">Make a Reservation</button>
+        </section>
+
+        <section class="featured-dishes">
+            <h2>Today's Featured Dishes</h2>
+            <div class="dishes-grid">
+                <div class="dish-card">
+                    <h3>Truffle Risotto</h3>
+                    <p class="dish-description">Creamy arborio rice with wild mushrooms and black truffle shavings</p>
+                    <span class="price">$28</span>
+                    <div class="dish-status error">Limited availability</div>
+                </div>
+                <div class="dish-card">
+                    <h3>Osso Buco</h3>
+                    <p class="dish-description">Slow-braised veal shanks with saffron risotto and gremolata</p>
+                    <span class="price">$34</span>
+                    <div class="dish-status success">Available</div>
+                </div>
+                <div class="dish-card">
+                    <h3>Seafood Linguine</h3>
+                    <p class="dish-description">Fresh clams, mussels, and shrimp in a white wine garlic sauce</p>
+                    <span class="price">$26</span>
+                    <div class="dish-status warning">Last 2 portions</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-preview">
+            <h2>Our Menu Categories</h2>
+            <div class="menu-categories">
+                <div class="category-item">
+                    <h3>Appetizers</h3>
+                    <p class="category-text">Start your meal with our selection of traditional Italian starters</p>
+                    <a href="#appetizers" class="menu-link">View Appetizers</a>
+                </div>
+                <div class="category-item">
+                    <h3>Main Courses</h3>
+                    <p class="category-text">Hearty dishes featuring the finest ingredients from Italy</p>
+                    <a href="#mains" class="menu-link">View Main Courses</a>
+                </div>
+                <div class="category-item">
+                    <h3>Desserts</h3>
+                    <p class="category-text">Sweet endings to complete your dining experience</p>
+                    <a href="#desserts" class="menu-link">View Desserts</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="reservation-form">
+            <h2>Make a Reservation</h2>
+            <p class="form-intro">Reserve your table for an unforgettable dining experience. We'll confirm your booking within 2 hours.</p>
+
+            <form class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="guest-name">Name:</label>
+                        <input type="text" id="guest-name" name="guest-name" required>
+                        <div class="error-message">Please enter your full name</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Preferred Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time:</label>
+                        <select id="time" name="time" required>
+                            <option value="">Select time</option>
+                            <option value="17:00">5:00 PM</option>
+                            <option value="17:30">5:30 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="18:30">6:30 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="19:30">7:30 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="20:30">8:30 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="party-size">Party Size:</label>
+                        <select id="party-size" name="party-size" required>
+                            <option value="">Number of guests</option>
+                            <option value="1">1 person</option>
+                            <option value="2">2 people</option>
+                            <option value="3">3 people</option>
+                            <option value="4">4 people</option>
+                            <option value="5">5 people</option>
+                            <option value="6">6 people</option>
+                            <option value="7">7 people</option>
+                            <option value="8">8 people</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="special-requests">Special Requests:</label>
+                        <textarea id="special-requests" name="special-requests" placeholder="Allergies, dietary restrictions, special occasions..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-button">Book Table</button>
+                    <button type="reset" class="reset-button">Clear Form</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="restaurant-info">
+            <h2>Visit Us</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Location</h3>
+                    <p class="info-text">123 Little Italy Street<br>New York, NY 10013</p>
+                    <a href="#directions" class="info-link">Get Directions</a>
+                </div>
+                <div class="info-card">
+                    <h3>Hours</h3>
+                    <p class="info-text">Tuesday - Sunday: 5:00 PM - 10:00 PM<br>Monday: Closed</p>
+                    <span class="status-badge">Open Now</span>
+                </div>
+                <div class="info-card">
+                    <h3>Contact</h3>
+                    <p class="info-text">Phone: (555) 123-4567<br>Email: info@bellavista.com</p>
+                    <a href="#call" class="info-link">Call Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>Stay Updated</h2>
+            <p class="newsletter-text">Get the latest news about special events, seasonal menus, and exclusive offers.</p>
+            <form class="newsletter-form">
+                <div class="newsletter-input">
+                    <label for="newsletter-email">Email Address:</label>
+                    <input type="email" id="newsletter-email" name="newsletter-email" placeholder="your.email@example.com" required>
+                </div>
+                <div class="newsletter-preferences">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="events" checked>
+                        Special Events
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="menu-updates">
+                        New Menu Items
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="offers">
+                        Exclusive Offers
+                    </label>
+                </div>
+                <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Bella Vista</h4>
+                <p class="footer-text">Bringing authentic Italian cuisine to your table since 1952.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#menu">Full Menu</a></li>
+                    <li><a href="#wine">Wine List</a></li>
+                    <li><a href="#events">Private Events</a></li>
+                    <li><a href="#gift-cards">Gift Cards</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#facebook">Facebook</a>
+                    <a href="#instagram">Instagram</a>
+                    <a href="#twitter">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">© 2024 Bella Vista Restaurant. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
