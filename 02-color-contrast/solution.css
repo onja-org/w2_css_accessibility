@@ -29,12 +29,12 @@ nav {
 }
 
 .link {
-    color: #ffffff;  /* Fixed: Better contrast on dark background */
-    text-decoration: underline;  /* Added: Visual indicator beyond color */
+    color: #ffffff; /* Fixed: Better contrast on dark background */
+    text-decoration: underline; /* Added: Visual indicator beyond color */
 }
 
 .link:hover {
-    color: #3498db;  /* Fixed: Good contrast and distinguishable */
+    color: #3498db; /* Fixed: Good contrast and distinguishable */
     text-decoration: none;
 }
 
@@ -52,7 +52,7 @@ main {
 }
 
 .subtle-text {
-    color: #555555;  /* Fixed: Much better contrast against white background */
+    color: #555555; /* Fixed: Much better contrast against white background */
     font-style: italic;
 }
 
@@ -74,7 +74,7 @@ main {
 
 .price {
     font-weight: bold;
-    color: #27ae60;
+    color: #247c2e;
 }
 
 .contact-form {
@@ -94,7 +94,8 @@ label {
     font-weight: bold;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #ddd;
@@ -102,16 +103,16 @@ input, textarea {
 }
 
 .error-message {
-    color: #d32f2f;  /* Fixed: Darker red for better contrast */
-    background-color: #ffebee;  /* Added: Background color */
-    border-left: 4px solid #d32f2f;  /* Added: Visual indicator beyond color */
-    padding: 0.5rem;  /* Added: Padding for the background */
+    color: #a30000; /* Fixed: Darker red for better contrast */
+    background-color: #ffebee; /* Added: Background color */
+    border-left: 4px solid #a30000; /* Added: Visual indicator beyond color */
+    padding: 0.5rem; /* Added: Padding for the background */
     font-size: 0.9rem;
     margin-top: 0.25rem;
 }
 
 button {
-    background-color: #3498db;
+    background-color: #0f5ea1;
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -130,6 +131,10 @@ footer {
     text-align: center;
 }
 
+footer .subtle-text {
+    color: #bdc3c7; /* Fixed: Better contrast on dark background */
+}
+
 footer .link {
-    color: #ffffff;  /* Fixed: Better contrast on dark background */
+    color: #ffffff; /* Fixed: Better contrast on dark background */
 }

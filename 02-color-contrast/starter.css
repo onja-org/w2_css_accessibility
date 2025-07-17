@@ -29,12 +29,12 @@ nav {
 }
 
 .link {
-    color: #bdc3c7;  /* Poor contrast! */
-    text-decoration: none;
+    color: #bdc3c7; /* Poor contrast! */
+    text-decoration: none; /* What text decoration could we add to distinguish links from normal text? */
 }
 
 .link:hover {
-    color: #ecf0f1;  /* Still poor contrast on hover */
+    color: #ecf0f1; /* Still poor contrast on hover */
 }
 
 main {
@@ -51,7 +51,7 @@ main {
 }
 
 .subtle-text {
-    color: #bdc3c7;  /* Poor contrast against white background! */
+    color: #bdc3c7; /* Poor contrast against white background! */
     font-style: italic;
 }
 
@@ -93,7 +93,8 @@ label {
     font-weight: bold;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #ddd;
@@ -101,13 +102,13 @@ input, textarea {
 }
 
 .error-message {
-    color: #e74c3c;  /* Only uses color to show error - not accessible! */
+    color: #e74c3c; /* Only uses color to show error - not accessible! */
     font-size: 0.9rem;
     margin-top: 0.25rem;
 }
 
 button {
-    background-color: #3498db;
+    background-color: #0f5ea1;
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -126,6 +127,11 @@ footer {
     text-align: center;
 }
 
+/* Oh no! Now that you changed the .subtle-text color, the footer text is very hard to read.
+/* Add some css to this selector to fix it */
+footer .subtle-text {
+}
+
 footer .link {
-    color: #bdc3c7;  /* Poor contrast again! */
+    color: #bdc3c7; /* Poor contrast again! */
 }

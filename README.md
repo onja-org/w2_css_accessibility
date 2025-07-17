@@ -10,17 +10,13 @@ By the end of this lab, you'll be able to:
 - Respect user motion preferences
 
 ## 🚀 Getting Started
-1. Watch this introduction video about WCAG (Web Content Accessibility Guidelines): [YouTube Video](https://www.youtube.com/watch?v=5H1JGdqLrWo)
-    - This will help you get an idea of some of the standards that exist for web accessibility
-1. Watch this video to get an understanding of the importance of accessibility in web design: [YouTube Video](https://www.youtube.com/watch?v=dEbl5jvLKGQ)
-    - It is our duty to be inclusive and accessible to all users, including those with disabilities
-2. Clone this repository
+1. Clone this repository
     ```bash
-    git clone https://github.com/onja-org/w2_css_accessibility
+    git clone https://github.com/onja-org/w1_css_accessibility
     ```
-3. Open `01-start-here/index.html` in your browser
-4. Work through each numbered folder in order
-5. Each folder has its own `instructions.md` - start there!
+2. Open `01-start-here/index.html` in your browser
+3. Work through each numbered folder in order
+4. Each folder has its own `instructions.md` - start there!
 
 ## ⏱️ Time Estimate
 - **Total time**: 60 minutes

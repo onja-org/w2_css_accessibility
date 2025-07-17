@@ -11,8 +11,15 @@ Open `challenge.html` in your browser. Notice how hard some text is to read? Tha
 
 2. **Learn to test contrast:**
    - Right-click on the gray text → Inspect
-   - In DevTools, find the "Contrast" section
-   - See the ⚠️ warning? That means it fails accessibility standards
+   - Different browsers have different DevTools, but look for:
+     - Firefox: `Accessibility` tab > "Check for issues: Contrast" or "Check for issues: All"
+     ![Accessibility Contrast Firefox](../assets/accessibility_contrast_firefox.png)
+     - Chromium-based browsers (Chrome, Edge, Brave): `CSS Overview` tab > "Capture Overview" > "Contrast Issues"
+     ![Accessibility Contrast Chromium](../assets/accessibility_contrast_chromium.png)
+   - DevTools will show you color suggestions to improve contrast (or at least show you whether the color is up to standards)
+      - For Firefox, in the `Elements` tab > `Styles` panel, if you click on the color swatch, it will show you the contrast ratio and suggest accessible colors.
+      ![Color Picker](../assets/accessibility_contrast_color_picker.png)
+      - For Chromium-based browsers, go to `Elements` tab > `Rules` panel, and click on the color swatch to see the contrast ratio and suggestions.
 
 3. **Fix the CSS:**
    Open `starter.css` and improve the contrast for:
@@ -34,6 +41,7 @@ Open `challenge.html` in your browser. Notice how hard some text is to read? Tha
 - [ ] All text is easily readable
 - [ ] DevTools shows no contrast warnings
 - [ ] Error message uses more than just color (try icon or border)
+- [ ] Check your solution against `solution.css` to see if there's anything else you could add
 
 ## Bonus Challenge
 Can you maintain the site's visual style while fixing accessibility? Good design and accessibility can coexist!
