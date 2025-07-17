@@ -1,5 +1,5 @@
 /* Final Challenge - Starter CSS */
-/* This CSS has ALL types of accessibility issues that you need to fix! */
+/* This CSS has the key accessibility issues you've learned to fix! */
 
 * {
     margin: 0;
@@ -11,7 +11,6 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f8f9fa;
-    font-size: 16px; /* Fixed size - won't scale well */
 }
 
 /* Remove all default focus indicators - BAD! */
@@ -22,14 +21,14 @@ body {
 header {
     background-color: #8b0000;
     color: white;
-    padding: 20px; /* Fixed pixels */
+    padding: 20px;
     width: 100%;
 }
 
 header h1 {
-    font-size: 32px; /* Fixed pixel size */
+    font-size: 32px;
     margin-bottom: 15px;
-    width: 1000px; /* Fixed width - will cause problems */
+    width: 1000px; /* Fixed width - will cause problems when zoomed */
     margin: 0 auto;
 }
 
@@ -38,6 +37,7 @@ nav {
     gap: 30px;
     width: 1000px; /* Fixed width */
     margin: 0 auto;
+    flex-wrap: nowrap; /* Won't wrap when zoomed */
 }
 
 nav a {
@@ -45,7 +45,7 @@ nav a {
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 4px;
-    white-space: nowrap; /* Won't wrap when zoomed */
+    white-space: nowrap; /* Prevents text wrapping */
 }
 
 nav a:hover {
@@ -55,7 +55,7 @@ nav a:hover {
 /* No focus styles for navigation */
 
 main {
-    width: 1000px; /* Fixed width - major problem */
+    width: 1000px; /* Fixed width - major problem when zoomed */
     margin: 0 auto;
     padding: 30px 20px;
 }
@@ -63,20 +63,19 @@ main {
 .hero {
     background: linear-gradient(135deg, #8b0000 0%, #a0522d 100%);
     color: white;
-    padding: 60px 40px; /* Fixed padding */
+    padding: 60px 40px;
     text-align: center;
     border-radius: 8px;
     margin-bottom: 40px;
-    width: 960px; /* Fixed width */
 }
 
 .hero h2 {
-    font-size: 36px; /* Fixed size */
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
 .hero-text {
-    font-size: 18px; /* Fixed size */
+    font-size: 18px;
     margin-bottom: 30px;
     color: #f0f0f0; /* Poor contrast on gradient background */
 }
@@ -84,12 +83,11 @@ main {
 .cta-button {
     background-color: #ffd700;
     color: #8b0000; /* Poor contrast! */
-    padding: 15px 30px; /* Fixed padding */
+    padding: 15px 30px;
     border: none;
     border-radius: 6px;
-    font-size: 16px; /* Fixed size */
+    font-size: 16px;
     cursor: pointer;
-    width: 200px; /* Fixed width */
 }
 
 /* No focus indicator for CTA button */
@@ -99,7 +97,7 @@ main {
 }
 
 .featured-dishes h2 {
-    font-size: 28px; /* Fixed size */
+    font-size: 28px;
     color: #8b0000;
     margin-bottom: 25px;
 }
@@ -113,30 +111,27 @@ main {
 
 .dish-card {
     background-color: white;
-    padding: 25px; /* Fixed padding */
+    padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 300px; /* Fixed width */
-    height: 280px; /* Fixed height - will cut off content */
-    overflow: hidden;
+    height: 250px; /* Fixed height */
+    overflow: hidden; /* Will cut off content when zoomed */
 }
 
 .dish-card h3 {
-    font-size: 20px; /* Fixed size */
+    font-size: 20px;
     color: #8b0000;
     margin-bottom: 10px;
 }
 
 .dish-description {
-    font-size: 14px; /* Fixed size */
+    font-size: 14px;
     color: #999999; /* Poor contrast! */
     margin-bottom: 15px;
-    height: 60px; /* Fixed height */
-    overflow: hidden;
 }
 
 .price {
-    font-size: 18px; /* Fixed size */
+    font-size: 18px;
     font-weight: bold;
     color: #228b22;
     display: block;
@@ -144,10 +139,9 @@ main {
 }
 
 .dish-status {
-    font-size: 12px; /* Very small fixed size */
+    font-size: 12px;
     padding: 4px 8px;
     border-radius: 4px;
-    width: 120px; /* Fixed width */
 }
 
 /* Status indicators only use color - not accessible! */
@@ -166,83 +160,24 @@ main {
     color: #856404; /* Borderline contrast */
 }
 
-.menu-preview {
-    margin-bottom: 40px;
-}
-
-.menu-preview h2 {
-    font-size: 28px; /* Fixed size */
-    color: #8b0000;
-    margin-bottom: 25px;
-}
-
-.menu-categories {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: nowrap; /* Won't wrap when zoomed */
-}
-
-.category-item {
-    background-color: white;
-    padding: 25px; /* Fixed padding */
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 280px; /* Fixed width */
-    height: 200px; /* Fixed height */
-    overflow: hidden;
-}
-
-.category-item h3 {
-    font-size: 18px; /* Fixed size */
-    color: #8b0000;
-    margin-bottom: 10px;
-}
-
-.category-text {
-    font-size: 14px; /* Fixed size */
-    color: #888888; /* Poor contrast */
-    margin-bottom: 15px;
-    height: 60px; /* Fixed height */
-    overflow: hidden;
-}
-
-.menu-link {
-    color: #4169e1; /* Poor contrast on white background */
-    text-decoration: none;
-    font-size: 14px; /* Fixed size */
-    padding: 8px 16px;
-    border: 1px solid #4169e1;
-    border-radius: 4px;
-    display: inline-block;
-}
-
-/* No focus styles for menu links */
-
 .reservation-form {
     background-color: #f5f5f5;
-    padding: 40px; /* Fixed padding */
+    padding: 40px;
     border-radius: 8px;
     margin-bottom: 40px;
     width: 960px; /* Fixed width */
 }
 
 .reservation-form h2 {
-    font-size: 28px; /* Fixed size */
+    font-size: 28px;
     color: #8b0000;
     margin-bottom: 10px;
 }
 
 .form-intro {
-    font-size: 16px; /* Fixed size */
+    font-size: 16px;
     color: #666666; /* Poor contrast */
     margin-bottom: 30px;
-    width: 880px; /* Fixed width */
-}
-
-.booking-form {
-    width: 100%;
 }
 
 .form-row {
@@ -259,7 +194,7 @@ main {
 
 label {
     display: block;
-    font-size: 14px; /* Fixed size */
+    font-size: 14px;
     font-weight: bold;
     margin-bottom: 5px;
     color: #333;
@@ -269,10 +204,10 @@ input,
 select,
 textarea {
     width: 100%;
-    padding: 10px; /* Fixed padding */
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-size: 14px; /* Fixed size */
+    font-size: 14px;
 }
 
 /* Very poor focus indicators for form elements */
@@ -284,7 +219,7 @@ textarea:focus {
 
 .error-message {
     color: #ff0000; /* Only uses color to show error! */
-    font-size: 12px; /* Very small fixed size */
+    font-size: 12px;
     margin-top: 5px;
 }
 
@@ -298,129 +233,50 @@ textarea:focus {
 .submit-button {
     background-color: #8b0000;
     color: white;
-    padding: 12px 24px; /* Fixed padding */
+    padding: 12px 24px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px; /* Fixed size */
-    width: 150px; /* Fixed width */
+    font-size: 16px;
 }
 
 .reset-button {
     background-color: #cccccc;
     color: #666666; /* Poor contrast! */
-    padding: 12px 24px; /* Fixed padding */
+    padding: 12px 24px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px; /* Fixed size */
-    width: 150px; /* Fixed width */
+    font-size: 16px;
 }
 
 /* No focus styles for form buttons */
 
-.restaurant-info {
-    margin-bottom: 40px;
-}
-
-.restaurant-info h2 {
-    font-size: 28px; /* Fixed size */
-    color: #8b0000;
-    margin-bottom: 25px;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 300px); /* Fixed widths */
-    gap: 25px;
-    justify-content: center;
-}
-
-.info-card {
-    background-color: white;
-    padding: 25px; /* Fixed padding */
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 300px; /* Fixed width */
-    height: 220px; /* Fixed height */
-    overflow: hidden;
-}
-
-.info-card h3 {
-    font-size: 18px; /* Fixed size */
-    color: #8b0000;
-    margin-bottom: 10px;
-}
-
-.info-text {
-    font-size: 14px; /* Fixed size */
-    color: #777777; /* Poor contrast */
-    margin-bottom: 15px;
-    height: 80px; /* Fixed height */
-    overflow: hidden;
-}
-
-.info-link {
-    color: #4169e1; /* Poor contrast */
-    text-decoration: none;
-    font-size: 14px; /* Fixed size */
-}
-
-.status-badge {
-    background-color: #90ee90;
-    color: #228b22; /* Poor contrast */
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 12px; /* Very small */
-}
-
 .newsletter {
     background-color: #8b0000;
     color: white;
-    padding: 40px; /* Fixed padding */
+    padding: 40px;
     border-radius: 8px;
     margin-bottom: 40px;
     width: 960px; /* Fixed width */
 }
 
 .newsletter h2 {
-    font-size: 24px; /* Fixed size */
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
 .newsletter-text {
-    font-size: 16px; /* Fixed size */
+    font-size: 16px;
     color: #ffcccc; /* Poor contrast on red background */
     margin-bottom: 25px;
-    width: 880px; /* Fixed width */
-}
-
-.newsletter-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.newsletter-input {
-    width: 100%;
-}
-
-.newsletter-input label {
-    color: white;
-    font-size: 14px; /* Fixed size */
-    margin-bottom: 5px;
-}
-
-.newsletter-input input {
-    width: 400px; /* Fixed width */
-    padding: 10px; /* Fixed padding */
-    font-size: 14px; /* Fixed size */
 }
 
 .newsletter-preferences {
     display: flex;
     gap: 30px;
     flex-wrap: nowrap; /* Won't wrap */
+    margin-bottom: 20px;
 }
 
 .checkbox-label {
@@ -428,25 +284,24 @@ textarea:focus {
     align-items: center;
     gap: 5px;
     color: #ffcccc; /* Poor contrast */
-    font-size: 12px; /* Very small fixed size */
+    font-size: 12px;
     white-space: nowrap;
 }
 
 .newsletter-button {
     background-color: #ffd700;
     color: #8b0000; /* Poor contrast */
-    padding: 12px 24px; /* Fixed padding */
+    padding: 12px 24px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 14px; /* Fixed size */
-    width: 150px; /* Fixed width */
+    font-size: 14px;
 }
 
 footer {
     background-color: #2c2c2c;
     color: white;
-    padding: 40px 20px; /* Fixed padding */
+    padding: 40px 20px;
 }
 
 .footer-content {
@@ -459,12 +314,12 @@ footer {
 }
 
 .footer-section h4 {
-    font-size: 16px; /* Fixed size */
+    font-size: 16px;
     margin-bottom: 15px;
 }
 
 .footer-text {
-    font-size: 14px; /* Fixed size */
+    font-size: 14px;
     color: #bbbbbb; /* Poor contrast */
     margin-bottom: 10px;
 }
@@ -480,7 +335,7 @@ footer {
 .footer-links a {
     color: #999999; /* Poor contrast */
     text-decoration: none;
-    font-size: 14px; /* Fixed size */
+    font-size: 14px;
 }
 
 .social-links {
@@ -492,7 +347,7 @@ footer {
 .social-links a {
     color: #999999; /* Poor contrast */
     text-decoration: none;
-    font-size: 14px; /* Fixed size */
+    font-size: 14px;
 }
 
 .footer-bottom {
@@ -507,7 +362,7 @@ footer {
 }
 
 .copyright {
-    font-size: 12px; /* Very small fixed size */
+    font-size: 12px;
     color: #888888; /* Poor contrast */
 }
 
@@ -519,7 +374,7 @@ footer {
 .legal-links a {
     color: #999999; /* Poor contrast */
     text-decoration: none;
-    font-size: 12px; /* Very small fixed size */
+    font-size: 12px;
 }
 
 /* No focus styles for footer links either! */
