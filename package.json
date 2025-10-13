@@ -1,0 +1,29 @@
+{
+    "name": "css-accessibility-lab",
+    "version": "1.0.0",
+    "description": "A hands-on CSS Accessibility Lab focused on color contrast, focus indicators, and responsive design to build inclusive web experiences.",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "author": "Your Name",
+    "license": "MIT",
+    "keywords": [
+        "accessibility",
+        "css",
+        "a11y",
+        "color-contrast",
+        "focus-indicators",
+        "responsive-design",
+        "web-development",
+        "inclusive-design"
+    ],
+    "devDependencies": {
+        "jest": "^29.7.0",
+        "jsdom": "^24.0.0",
+        "jest-environment-jsdom": "^29.7.0"
+    },
+    "jest": {
+        "testEnvironment": "jsdom"
+    }
+}
