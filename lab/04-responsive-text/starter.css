@@ -23,16 +23,16 @@ header {
 header h1 {
     font-size: 28px;
     margin-bottom: 10px;
-    width: 800px; /* Fixed width - will cause problems when zoomed */
+    max-width: 800px; /* FIXED: Using max-width instead of fixed width */
     margin: 0 auto;
 }
 
 nav {
     display: flex;
     gap: 30px;
-    width: 800px; /* Fixed width */
+    max-width: 800px; /* FIXED: Using max-width */
     margin: 0 auto;
-    flex-wrap: nowrap; /* Won't wrap - problematic when zoomed */
+    flex-wrap: wrap; /* FIXED: Allow wrapping when zoomed */
 }
 
 nav a {
@@ -40,7 +40,7 @@ nav a {
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 4px;
-    white-space: nowrap; /* Prevents text wrapping */
+    /* FIXED: Removed text wrapping restriction */
 }
 
 nav a:hover {
@@ -48,9 +48,10 @@ nav a:hover {
 }
 
 main {
-    width: 800px; /* Fixed width - major problem when zoomed */
+    max-width: 800px; /* FIXED: Using max-width instead of fixed width */
     margin: 0 auto;
     padding: 30px 20px;
+    width: 100%; /* ADDED: Ensures it can shrink */
 }
 
 .featured-review {
@@ -73,7 +74,7 @@ main {
     margin-bottom: 15px;
     font-size: 14px;
     color: #666;
-    flex-wrap: nowrap; /* Won't wrap when zoomed */
+    flex-wrap: wrap; /* FIXED: Allow wrapping when zoomed */
 }
 
 .rating {
@@ -84,8 +85,7 @@ main {
 .review-excerpt {
     font-size: 16px;
     margin-bottom: 20px;
-    height: 60px; /* Fixed height - will cut off text when zoomed */
-    overflow: hidden; /* Cuts off content */
+    /* FIXED: Removed restrictions to prevent text cutoff */
 }
 
 .read-more {
@@ -110,8 +110,11 @@ main {
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(3, 250px); /* Fixed column widths */
-    gap: 20px;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    ); /* FIXED: Flexible grid */
+    gap: 25px;
     justify-content: center;
 }
 
@@ -121,8 +124,8 @@ main {
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    height: 150px; /* Fixed height */
-    overflow: hidden; /* Will cut off content when zoomed */
+    min-height: 9.375em; /* FIXED: Using flexible minimum size (equivalent to 150px at 16px base) */
+    /* FIXED: Removed content cutoff restrictions */
 }
 
 .category-card h3 {
@@ -148,7 +151,8 @@ main {
     padding: 25px;
     border-radius: 8px;
     margin-bottom: 30px;
-    width: 750px; /* Fixed width */
+    max-width: 750px; /* FIXED: Using max-width instead of fixed width */
+    width: 100%; /* ADDED: Flexible width */
 }
 
 .newsletter-signup h2 {
@@ -180,7 +184,8 @@ label {
 }
 
 input[type="email"] {
-    width: 300px; /* Fixed width */
+    max-width: 300px; /* FIXED: Using max-width instead of fixed width */
+    width: 100%; /* ADDED: Flexible width */
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -191,7 +196,7 @@ input[type="email"] {
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
-    flex-wrap: nowrap; /* Won't wrap - problematic when zoomed */
+    flex-wrap: wrap; /* FIXED: Allow wrapping when zoomed */
 }
 
 .checkbox-label {
@@ -200,7 +205,7 @@ input[type="email"] {
     gap: 5px;
     font-size: 12px;
     font-weight: normal;
-    white-space: nowrap; /* Won't wrap */
+    /* FIXED: Removed text wrapping restriction */
 }
 
 .subscribe-btn {
@@ -223,10 +228,11 @@ footer {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    width: 800px; /* Fixed width */
+    max-width: 800px; /* FIXED: Using max-width */
     margin: 0 auto;
     margin-bottom: 20px;
-    flex-wrap: nowrap; /* Won't wrap when zoomed */
+    flex-wrap: wrap; /* FIXED: Allow wrapping when zoomed */
+    gap: 20px; /* ADDED: Gap for wrapped items */
 }
 
 .footer-section h4 {
@@ -251,7 +257,7 @@ footer {
 .social-links {
     display: flex;
     gap: 15px;
-    flex-wrap: nowrap; /* Won't wrap when zoomed */
+    flex-wrap: wrap; /* FIXED: Allow wrapping when zoomed */
 }
 
 .social-links a {
@@ -262,6 +268,6 @@ footer {
     text-align: center;
     font-size: 12px;
     color: #bdc3c7;
-    width: 800px; /* Fixed width */
+    max-width: 800px; /* FIXED: Using max-width */
     margin: 0 auto;
 }

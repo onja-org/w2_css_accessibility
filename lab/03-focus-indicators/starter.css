@@ -13,12 +13,40 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Remove default focus indicators - BAD for accessibility! */
+/* FIXED: Proper focus indicators for all interactive elements */
 a:focus,
 button:focus,
 input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+}
+
+/* Individual focus rules for test compatibility */
+a:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+}
+
+button:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+}
+
+input:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+}
+
 select:focus {
-    outline: none; /* This removes the browser's default focus indicator */
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+}
+
+textarea:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
 }
 
 header {
@@ -45,6 +73,13 @@ nav a {
 }
 
 nav a:hover {
+    background-color: #2d3748;
+}
+
+/* FIXED: Clear focus indicators for navigation links on dark background */
+nav a:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
     background-color: #2d3748;
 }
 
@@ -86,6 +121,12 @@ main {
     background-color: #38a169;
 }
 
+/* FIXED: Visible focus indicator for CTA button on gradient background */
+.cta-button:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
 /* No focus styles for buttons - keyboard users can't tell where they are */
 
 .search-section {
@@ -117,7 +158,8 @@ label {
 }
 
 input,
-select {
+select,
+textarea {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #e2e8f0;
@@ -125,10 +167,13 @@ select {
     font-size: 1rem;
 }
 
-/* Inputs have very faint focus - hard to see */
+/* FIXED: Strong focus indicators for form inputs */
 input:focus,
-select:focus {
-    border-color: #cbd5e0; /* Too light! */
+select:focus,
+textarea:focus {
+    border-color: #0066cc;
+    outline: 2px solid #0066cc;
+    outline-offset: 1px;
 }
 
 .search-button {
@@ -139,6 +184,12 @@ select:focus {
     border-radius: 4px;
     cursor: pointer;
     height: fit-content;
+}
+
+/* FIXED: Focus indicator for search button */
+.search-button:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
 }
 
 .courses {
@@ -190,6 +241,17 @@ select:focus {
     flex: 1;
 }
 
+/* FIXED: Focus indicators for course action buttons */
+.btn-primary:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+}
+
+.btn-secondary:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+}
+
 .newsletter {
     background-color: #edf2f7;
     padding: 2rem;
@@ -216,6 +278,12 @@ select:focus {
     width: auto;
 }
 
+/* FIXED: Better focus indicator for checkboxes */
+.checkbox-group input[type="checkbox"]:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+}
+
 .checkbox-group label {
     margin-bottom: 0;
     font-weight: normal;
@@ -229,6 +297,12 @@ select:focus {
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+}
+
+/* FIXED: Focus indicator for subscribe button */
+.subscribe-button:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
 }
 
 footer {
@@ -252,6 +326,13 @@ footer {
 }
 
 .footer-links a:hover {
+    color: white;
+}
+
+/* FIXED: Focus indicators for footer links on dark background */
+.footer-links a:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
     color: white;
 }
 
